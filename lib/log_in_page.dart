@@ -38,7 +38,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(35.0),
                       ),
-                      color: Colors.pink,
+                      color: Colors.blue.shade100,
                       margin: EdgeInsets.fromLTRB(50, 0, 50, 0),
                       elevation: 0,
                       child: Container(
@@ -62,7 +62,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(35.0),
                       ),
-                      color: Colors.pinkAccent,
+                      color: Colors.blue.shade100,
                       margin: EdgeInsets.fromLTRB(50, 0, 50, 0),
                       elevation: 0,
                       child: Container(
@@ -89,7 +89,8 @@ class MyCustomFormState extends State<MyCustomForm> {
                     padding: EdgeInsets.only(top: 20),
                     margin: EdgeInsets.fromLTRB(100, 0, 100, 0),
                     child: RaisedButton(
-                      color: Colors.green,
+                      elevation: 0,
+                      color: Colors.transparent,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(35.0),
                       ),
@@ -109,7 +110,8 @@ class MyCustomFormState extends State<MyCustomForm> {
                     width: double.infinity,
                     margin: EdgeInsets.fromLTRB(100, 0, 100, 0),
                     child: RaisedButton(
-                      color: Colors.green,
+                      elevation: 0,
+                      color: Colors.transparent,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(35.0),
                       ),

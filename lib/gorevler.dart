@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 bool checkBoxState = false;
 bool checkBoxState1 = false;
+bool checkBoxState2= false;
 
 class Gorevler extends StatefulWidget {
   @override
@@ -35,70 +36,36 @@ class GorevlerState extends State<Gorevler> {
             Column(
               children: <Widget>[
                 Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(35.0),
-                  ),
-                  margin: EdgeInsets.fromLTRB(40, 10, 40, 10),
-                  color: Colors.green,
-                  elevation: 20,
-                  child: ListTile(
-                    contentPadding: EdgeInsets.all(20),
-                    leading: CircleAvatar(
-                      backgroundImage: NetworkImage(
-                          "http://medya.dpu.edu.tr/files/2016/11/13/5828d080b6bb2/20161113214414.jpeg"),
-                      radius: 30,
-                    ),
-                    title: Text(
-                      "Günlük Görev",
-                      style: TextStyle(fontFamily: 'Helvetica', fontSize: 20),
-                    ),
-                    subtitle: Text(
-                      "Hadi bugün sinemaya gidelim",
-                      style: TextStyle(fontSize: 15),
-                    ),
-                    trailing: Icon(
-                      Icons.camera_alt,
-                      color: Colors.white,
-                      size: 40.0,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(45.0),
               ),
-              margin: EdgeInsets.fromLTRB(40, 10, 40, 10),
-              color: Colors.red[100],
-              elevation: 20,
-              child: ListTile(
-                contentPadding: EdgeInsets.all(20),
-                leading: CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      "https://images6.alphacoders.com/311/311701.jpg"),
-                  radius: 30,
-                ),
-                title: Text(
-                  "zaten ",
-                  style: TextStyle(fontFamily: 'Helvetica', fontSize: 15),
-                ),
-                trailing: Icon(
-                  Icons.access_alarm,
-                  color: Colors.white,
-                  size: 40.0,
+              margin: EdgeInsets.all(20),
+              color: Colors.blue.shade100,
+              elevation: 10,
+              child: CheckboxListTile(
+                value: checkBoxState2,
+                onChanged: (secildi) {
+                  setState(() {
+                    checkBoxState2 = secildi;
+                  });
+                },
+                activeColor: Colors.red,
+                title: Text("Haydi Bugün sinemaya gidelim."),
+                secondary: CircleAvatar(
+                  backgroundImage: AssetImage("assets/images/kitap.jpg"),
                 ),
               ),
+            ),
+              ],
             ),
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(90.0),
               ),
-              margin: EdgeInsets.fromLTRB(40, 10, 40, 10),
-              color: Colors.purple[50],
+              margin: EdgeInsets.all(20),
+              color: Colors.blue.shade100,
               elevation: 20,
               child: ListTile(
-                  contentPadding: EdgeInsets.all(20),
                   leading: CircleAvatar(
                     backgroundImage: NetworkImage(
                         "https://imgrosetta.mynet.com.tr/file/10183658/10183658-728xauto.jpg"),
@@ -125,10 +92,11 @@ class GorevlerState extends State<Gorevler> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(45.0),
               ),
-              margin: EdgeInsets.fromLTRB(40, 10, 40, 10),
-              color: Colors.yellowAccent[100],
+              margin: EdgeInsets.all(20),
+              color: Colors.blue.shade100,
               elevation: 10,
               child: CheckboxListTile(
+                checkColor: Colors.white,
                 value: checkBoxState,
                 onChanged: (secildi) {
                   setState(() {
@@ -144,8 +112,8 @@ class GorevlerState extends State<Gorevler> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(45.0),
               ),
-              margin: EdgeInsets.fromLTRB(40, 10, 40, 10),
-              color: Colors.yellowAccent[100],
+              margin: EdgeInsets.all(20),
+              color: Colors.blue.shade100,
               elevation: 10,
               child: CheckboxListTile(
                 value: checkBoxState1,

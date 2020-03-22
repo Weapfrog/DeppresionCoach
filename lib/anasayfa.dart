@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/log_in_page.dart';
 import 'package:flutter_app/profil.dart';
+
+
 
 class Anasayfa extends StatefulWidget {
   @override
@@ -92,7 +95,7 @@ class _AnasayfaState extends State<Anasayfa> {
                         borderRadius: BorderRadius.circular(35.0),
                       ),
                       color: Colors.transparent,
-                      elevation: 0.2,
+                      elevation:0,
                       child: Text(
                         "ALP AYGÜN",
                         style: TextStyle(color: Colors.black, fontSize: 15),
@@ -107,7 +110,7 @@ class _AnasayfaState extends State<Anasayfa> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(35.0),
                   ),
-                  elevation: 0.2,
+                  elevation: 0,
                   color: Colors.transparent,
                   child: Text(
                     "DOSTLARLA",
@@ -131,7 +134,12 @@ class _AnasayfaState extends State<Anasayfa> {
               alignment: Alignment.bottomRight,
               child: IconButton(
                 icon: Icon(Icons.camera_alt),
-                onPressed: () {},
+                onPressed: () {
+                 Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SecondPage()));
+                },
                 color: Colors.pink,
               )),
         ]));

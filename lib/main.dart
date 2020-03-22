@@ -10,7 +10,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
       backgroundColor: Colors.white10,
-      primarySwatch: Colors.grey,
+      primarySwatch: Colors.blueGrey,
     ),
     home: Scaffold(
       appBar: AppBar(

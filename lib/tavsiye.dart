@@ -91,7 +91,7 @@ class TavsiyeState extends State<Tavsiye> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(35.0),
                     ),
-                    color: Color.fromARGB(500, 170, 208, 217),
+                    color: Colors.blue.shade100,
                     margin: EdgeInsets.all(20),
                     elevation: 20,
                     child: ListTile(
@@ -117,7 +117,7 @@ class TavsiyeState extends State<Tavsiye> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(35.0),
                     ),
-                    color: Color.fromARGB(83000000, 201, 212, 197),
+                    color: Colors.blue.shade100,
                     margin: EdgeInsets.all(20),
                     elevation: 20,
                     child: ListTile(
@@ -149,7 +149,7 @@ class TavsiyeState extends State<Tavsiye> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(35.0),
                     ),
-                    color: Color.fromARGB(1500, 238, 213, 209),
+                    color: Colors.blue.shade100,
                     margin: EdgeInsets.all(20),
                     elevation: 20,
                     child: ListTile(
@@ -176,7 +176,7 @@ class TavsiyeState extends State<Tavsiye> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(35.0),
                     ),
-                    color: Color.fromARGB(2000, 229, 185, 182),
+                    color: Colors.blue.shade100,
                     margin: EdgeInsets.all(20),
                     elevation: 20,
                     child: ListTile(
@@ -198,7 +198,7 @@ class TavsiyeState extends State<Tavsiye> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(35.0),
                     ),
-                    color: Color.fromARGB(500, 170, 208, 217),
+                    color: Colors.blue.shade100,
                     margin: EdgeInsets.all(20),
                     elevation: 20,
                     child: ListTile(
