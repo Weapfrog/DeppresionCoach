@@ -97,7 +97,8 @@ class _AnasayfaState extends State<Anasayfa> {
                       color: Colors.transparent,
                       elevation:0,
                       child: Text(
-                        "ALP AYGÜN",
+                        sayfaSayisi<2 ? "ALP AYGUN" : "BERKE OZTURK"
+                        ,
                         style: TextStyle(color: Colors.black, fontSize: 15),
                       ),
                     ),
@@ -113,7 +114,7 @@ class _AnasayfaState extends State<Anasayfa> {
                   elevation: 0,
                   color: Colors.transparent,
                   child: Text(
-                    "DOSTLARLA",
+                    "FRIENDS",
                     style: TextStyle(color: Colors.black, fontSize: 10),
                   ),
                 ),

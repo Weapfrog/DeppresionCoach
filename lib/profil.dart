@@ -37,21 +37,21 @@ class Profil extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    "İsim Soyisim",
+                    "Berke Ozturk",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 22,
                     ),
                   ),
                   Text(
-                    "42 yaşında",
+                    "Age: 21",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 22,
                     ),
                   ),
                   Text(
-                    "2. Seviye / 240 PUAN",
+                    "2. Level / 240 Points",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 22,
@@ -77,7 +77,7 @@ class Profil extends StatelessWidget {
                         SizedBox(height: 3),
                       ]),
                   Text(
-                    "Status should be here",
+                    "Im in deppression. Whats poppin?",
                     style: TextStyle(),
                   ),
                   SizedBox(height: 20),

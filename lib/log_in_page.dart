@@ -4,6 +4,7 @@ import 'package:flutter_app/anasayfa.dart';
 import 'package:flutter_app/gorevler.dart';
 import 'package:flutter_app/profil.dart';
 import 'package:flutter_app/tavsiye.dart';
+import 'package:flutter_app/test.dart';
 
 class MyCustomForm extends StatefulWidget {
   @override
@@ -292,13 +293,14 @@ class _SignInPageState extends State<SignInPage> {
                   alignment: Alignment.bottomRight,
                   margin: EdgeInsets.only(right: 50),
                   child: RaisedButton(
+                    color: Colors.red,
                     onPressed: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SecondPage()));
+                              builder: (context) => TextValue()));
                     },
-                    child: Text("SignIn"),
+                    child: Text("Continue"),
                   ))
             ],
           ))
@@ -312,7 +314,7 @@ class SecondPage extends StatefulWidget {
 }
 
 class SecondPageState extends State<SecondPage> {
-  int aktifSayfa = 0;
+  int aktifSayfa = 3;
   gecerliSayfa(int sayfa) {
     if (sayfa == 0) {
       return Gorevler();
@@ -341,17 +343,17 @@ class SecondPageState extends State<SecondPage> {
             IconButton(
                 icon: Icon(Icons.camera_alt),
                 onPressed: () {
-                  debugPrint("Kameraya Tıklandı");
+                  debugPrint("Camera");
                 }),
             IconButton(
                 icon: Icon(Icons.perm_phone_msg),
                 onPressed: () {
-                  debugPrint("Bize ulaşına Tıklandı");
+                  debugPrint("Connect Us");
                 }),
             IconButton(
                 icon: Icon(Icons.not_listed_location),
                 onPressed: () {
-                  debugPrint("Uygulamanın amacına Tıklandı");
+                  debugPrint("Perpose of App");
                 }),
           ],
         ),
@@ -366,28 +368,28 @@ class SecondPageState extends State<SecondPage> {
               BottomNavigationBarItem(
                 icon: Icon(Icons.local_play),
                 title: Text(
-                  "Görevler",
+                  "Missions",
                   textDirection: TextDirection.ltr,
                 ),
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
                 title: Text(
-                  "Anasayfa",
+                  "HomePage",
                   textDirection: TextDirection.ltr,
                 ),
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.live_help),
                 title: Text(
-                  "Tavsiye",
+                  "Advices",
                   textDirection: TextDirection.ltr,
                 ),
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.account_box),
                 title: Text(
-                  "Profilim",
+                  "Profile",
                   textDirection: TextDirection.ltr,
                 ),
               ),

@@ -50,7 +50,7 @@ class GorevlerState extends State<Gorevler> {
                   });
                 },
                 activeColor: Colors.red,
-                title: Text("Haydi Bugün sinemaya gidelim."),
+                title: Text("Lets go to cinema right now!"),
                 secondary: CircleAvatar(
                   backgroundImage: AssetImage("assets/images/kitap.jpg"),
                 ),
@@ -72,7 +72,7 @@ class GorevlerState extends State<Gorevler> {
                     radius: 30,
                   ),
                   title: Text(
-                    "Bugün kaç sigara içtim?",
+                    "How many cigarettes did i smoke today?",
                     style: TextStyle(fontFamily: 'Helvetica', fontSize: 15),
                   ),
                   subtitle: Text(
@@ -104,7 +104,7 @@ class GorevlerState extends State<Gorevler> {
                   });
                 },
                 activeColor: Colors.red,
-                title: Text("Bugün dişlerimi fırçaladım"),
+                title: Text("I brushed my teeths."),
                 secondary: Icon(Icons.add),
               ),
             ),
@@ -123,7 +123,7 @@ class GorevlerState extends State<Gorevler> {
                   });
                 },
                 activeColor: Colors.red,
-                title: Text("Bugün ilaçlarımı aldım."),
+                title: Text("I took my pills today."),
                 secondary: Icon(Icons.add),
               ),
             ),

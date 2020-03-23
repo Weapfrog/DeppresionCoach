@@ -14,24 +14,24 @@ class TavsiyeState extends State<Tavsiye> {
   int seciliMuzik = 0;
   int seciliYer = 0;
   List<String> filmler = [
-    "YUZUKLERIN EFENDISI",
+    "Lord of the Rings",
     "Harry Potter",
-    "Hababam Sınıfı",
-    "a",
-    "b",
-    "c"
+    "Shawshank Redemption",
+    "Hobbit",
+    "Interstellar",
+    "Inception"
   ];
   List<String> diziler = [
-    "HIMYM",
-    "GAMEOFTHRONES",
-    "FALANFILAN",
-    "a",
-    "b",
-    "c"
+    "How I Met Your Mother",
+    "Game of Thrones",
+    "Suits",
+    "Friends",
+    "Vikings",
+    "Merlin"
   ];
-  List<String> kitaplar = ["ÇALIKUSU", "FALAN", "FILAN"];
-  List<String> muzikler = ["TAMAM", "DEVAM", "OK"];
-  List<String> yerler = ["HARMANKAYA", "FENER", "HALISAHA"];
+  List<String> kitaplar = ["The Great Gatsby", "The Book Thief", "Fahrenheit 451"];
+  List<String> muzikler = ["The Box", "RIP to my Youth", "Muslum Baba"];
+  List<String> yerler = ["London", "San Francisco", "Istanbul"];
 
   filmDegistir() {
     setState(() {
@@ -100,7 +100,7 @@ class TavsiyeState extends State<Tavsiye> {
                                 AssetImage("assets/images/film.jpg"),
                             radius: 30),
                         title: Text("${filmler[seciliFilm]}"),
-                        subtitle: Text("Film"),
+                        subtitle: Text("Movies"),
                         trailing: IconButton(
                             icon: Icon(Icons.refresh),
                             onPressed: () {
@@ -130,7 +130,7 @@ class TavsiyeState extends State<Tavsiye> {
                           style: TextStyle(fontStyle: FontStyle.normal),
                         ),
                         subtitle: Text(
-                          "Dizi",
+                          "TV Series",
                         ),
                         trailing: IconButton(
                             icon: Icon(Icons.refresh),
@@ -158,7 +158,7 @@ class TavsiyeState extends State<Tavsiye> {
                                 AssetImage("assets/images/kitap.jpg"),
                             radius: 30),
                         title: Text("${kitaplar[seciliKitap]}"),
-                        subtitle: Text("Kitap"),
+                        subtitle: Text("Books"),
                         trailing: IconButton(
                             icon: Icon(Icons.refresh),
                             onPressed: () {
@@ -185,7 +185,7 @@ class TavsiyeState extends State<Tavsiye> {
                                 AssetImage("assets/images/music.jpg"),
                             radius: 30),
                         title: Text("${muzikler[seciliMuzik]}"),
-                        subtitle: Text("Müzik"),
+                        subtitle: Text("Music"),
                         trailing: IconButton(
                             icon: Icon(Icons.refresh),
                             onPressed: () {
@@ -207,7 +207,7 @@ class TavsiyeState extends State<Tavsiye> {
                                 AssetImage("assets/images/film.jpg"),
                             radius: 30),
                         title: Text("${yerler[seciliYer]}"),
-                        subtitle: Text("Gezilecek Yerler"),
+                        subtitle: Text("Places"),
                         trailing: IconButton(
                             icon: Icon(Icons.refresh),
                             onPressed: () {
