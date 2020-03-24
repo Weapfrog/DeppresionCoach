@@ -2,14 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/home_screen.dart';
 import 'package:flutter_app/log_in_page.dart';
 
-class Profil extends StatelessWidget {
+class Profil extends StatefulWidget {
+  @override
+  _ProfilState createState() => _ProfilState();
+}
+
+class _ProfilState extends State<Profil> {
+  static double _lowerValue = 1;
+  static double _upperValue = 5;
+  RangeValues values = RangeValues(_lowerValue, _upperValue);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Container(
-        height: 900,
+      body: Container(
+          height: 900,
           decoration: BoxDecoration(
-            
               gradient: LinearGradient(
                   colors: [
                     Color(0xFF3594DD),
@@ -139,7 +146,24 @@ class Profil extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 20),
+                  RangeSlider(
+                      min: _lowerValue,
+                      max: _upperValue,
+                      divisions: 4,
+                      values: values,
+                      labels: RangeLabels(values.start.toString(), values.end.toString()),
+                      onChanged: (val){
+                        setState(() {
+                          values = val;
+                        });
+                      },  
+                      activeColor: Colors.blueGrey,
+                      inactiveColor: Colors.black,)
+                      ,Container(
+                        child: Text("Your Level : 2",style: TextStyle(color: Colors.black87,fontSize: 24),)
+                      )
                 ],
+              
               ),
             ),
           )),
