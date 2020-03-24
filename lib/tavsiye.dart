@@ -29,13 +29,40 @@ class TavsiyeState extends State<Tavsiye> {
     "Vikings",
     "Merlin"
   ];
-  List<String> kitaplar = ["The Great Gatsby", "The Book Thief", "Fahrenheit 451"];
-  List<String> muzikler = ["The Box", "RIP to my Youth", "Muslum Baba"];
-  List<String> yerler = ["London", "San Francisco", "Istanbul"];
+  List<String> kitaplar = [
+    "Father Goriot",
+    "Mr. Mercedes",
+    "Les Miserables",
+    "The Little Prince",
+    "Jane Eyre",
+    "The Adventures of Tom Sawyer",
+    "Utopia",
+    "Dr Jekyll and Mr Hyde"
+  ];
+  List<String> muzikler = [
+    "Marconi Union – Weightless",
+    "Airstream – Electra",
+    "Enya – Watermark",
+    "Adele – Someone Like You",
+    "Coldplay – Strawberry Swing",
+    "Mozart – Canzonetta Sull’aria"
+  ];
+  List<String> yerler = [
+    "Harmankaya Waterfalls",
+    "Varagel Tunnel",
+    "Kozlu Beach",
+    "Zonguldak Mine Museum",
+    "Gökgöl Cave",
+    "Değirmenağzı Beach",
+    "Lighthouse",
+    "Zonguldak City Forest"
+  ];
 
   filmDegistir() {
     setState(() {
       seciliFilm++;
+      if(seciliFilm == filmler.length)
+        seciliFilm = 0;
       return filmler[seciliFilm];
     });
   }
@@ -43,6 +70,8 @@ class TavsiyeState extends State<Tavsiye> {
   diziDegistir() {
     setState(() {
       seciliDizi++;
+      if(seciliDizi == diziler.length)
+        seciliDizi = 0;
       return diziler[seciliDizi];
     });
   }
@@ -50,6 +79,8 @@ class TavsiyeState extends State<Tavsiye> {
   kitapDegistir() {
     setState(() {
       seciliKitap++;
+      if(seciliKitap == kitaplar.length)
+        seciliKitap=0;
       return kitaplar[seciliKitap];
     });
   }
@@ -57,6 +88,8 @@ class TavsiyeState extends State<Tavsiye> {
   muzikDegistir() {
     setState(() {
       seciliMuzik++;
+      if(seciliMuzik==muzikler.length)
+        seciliMuzik=0;
       return muzikler[seciliMuzik];
     });
   }
@@ -64,6 +97,8 @@ class TavsiyeState extends State<Tavsiye> {
   yerDegistir() {
     setState(() {
       seciliYer++;
+      if(seciliYer==yerler.length)
+        seciliYer=0;
       return yerler[seciliYer];
     });
   }
@@ -104,7 +139,7 @@ class TavsiyeState extends State<Tavsiye> {
                         trailing: IconButton(
                             icon: Icon(Icons.refresh),
                             onPressed: () {
-                              filmDegistir();
+                                filmDegistir();                          
                             })),
                   ),
                 ),
@@ -135,11 +170,10 @@ class TavsiyeState extends State<Tavsiye> {
                         trailing: IconButton(
                             icon: Icon(Icons.refresh),
                             onPressed: () {
-                              while (seciliDizi < 2) diziDegistir();
+                              diziDegistir();
                             })),
                   ),
                 ),
-                // Divider(color: Colors.black,height:32.0,indent:20),
               ],
             ),
             Column(
@@ -162,11 +196,10 @@ class TavsiyeState extends State<Tavsiye> {
                         trailing: IconButton(
                             icon: Icon(Icons.refresh),
                             onPressed: () {
-                              while (seciliKitap < 2) kitapDegistir();
+                              kitapDegistir();
                             })),
                   ),
                 ),
-                //Divider(color: Colors.black,height:32.0,indent:20),
               ],
             ),
             Column(
@@ -189,7 +222,7 @@ class TavsiyeState extends State<Tavsiye> {
                         trailing: IconButton(
                             icon: Icon(Icons.refresh),
                             onPressed: () {
-                              while (seciliMuzik < 2) muzikDegistir();
+                              muzikDegistir();
                             })),
                   ),
                 ),
@@ -211,7 +244,7 @@ class TavsiyeState extends State<Tavsiye> {
                         trailing: IconButton(
                             icon: Icon(Icons.refresh),
                             onPressed: () {
-                              while (seciliYer < 2) yerDegistir();
+                              yerDegistir();
                             })),
                   ),
                 ),
