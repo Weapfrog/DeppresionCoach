@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/home_screen.dart';
 import 'package:flutter_app/log_in_page.dart';
+import 'package:flutter_app/message.dart';
+import 'package:flutter_app/message_model.dart';
+
 
 class Profil extends StatefulWidget {
   @override
@@ -73,7 +76,7 @@ class _ProfilState extends State<Profil> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => HomeScreen()));
+                                      builder: (context) => MessageMe()));
                             }),
                         SizedBox(height: 3),
                         IconButton(

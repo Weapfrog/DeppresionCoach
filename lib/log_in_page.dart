@@ -27,14 +27,13 @@ class MyCustomFormState extends State<MyCustomForm> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.only(top: 25),
-                    padding: EdgeInsets.only(bottom: 75),
-                    height: 200,
-                    width: 200,
-                    child: FadeInImage.assetNetwork(
-                        placeholder: "assets/images/giphy.gif",
-                        image: "https://cdn1.beun.edu.tr/beun.png"),
-                  ),
+                      margin: EdgeInsets.only(top: 30),
+                      padding: EdgeInsets.only(bottom: 50),
+                      child: CircleAvatar(
+                        radius: 100,
+                        backgroundImage:
+                            AssetImage("assets/images/deppression.jpeg"),
+                      )),
                   Card(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(35.0),
@@ -85,28 +84,27 @@ class MyCustomFormState extends State<MyCustomForm> {
                         ),
                       )),
                   Container(
-                    
-                    width: double.infinity,
-                    padding: EdgeInsets.only(top: 20),
-                    margin: EdgeInsets.fromLTRB(100, 0, 100, 0),
-                    child: RaisedButton(
-                      elevation: 0,
-                      color: Colors.transparent,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(35.0),
-                      ),
-                      onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => SecondPage())),
-                      textColor: Colors.blueGrey,
-                      child: Container(
-                        child:Text(
-                        "LOGIN",
-                        style: TextStyle(letterSpacing: 5.0),
-                      ),
-                    ),)
-                  ),
+                      width: double.infinity,
+                      padding: EdgeInsets.only(top: 20),
+                      margin: EdgeInsets.fromLTRB(100, 0, 100, 0),
+                      child: RaisedButton(
+                        elevation: 0,
+                        color: Colors.transparent,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(35.0),
+                        ),
+                        onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SecondPage())),
+                        textColor: Colors.blueGrey,
+                        child: Container(
+                          child: Text(
+                            "LOGIN",
+                            style: TextStyle(letterSpacing: 5.0),
+                          ),
+                        ),
+                      )),
                   Container(
                     width: double.infinity,
                     margin: EdgeInsets.fromLTRB(100, 0, 100, 0),
@@ -295,10 +293,8 @@ class _SignInPageState extends State<SignInPage> {
                   child: RaisedButton(
                     color: Colors.red,
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => TextValue()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => TextValue()));
                     },
                     child: Text("Continue"),
                   ))

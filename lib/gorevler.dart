@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 bool checkBoxState = false;
 bool checkBoxState1 = false;
-bool checkBoxState2= false;
-bool checkBoxState3= false;
-bool checkBoxState4= false;
-bool checkBoxState5= false;
-bool checkBoxState6= false;
-bool checkBoxState7= false;
+bool checkBoxState2 = false;
+bool checkBoxState3 = false;
+bool checkBoxState4 = false;
+bool checkBoxState5 = false;
+bool checkBoxState6 = false;
+bool checkBoxState7 = false;
 
 class Gorevler extends StatefulWidget {
   @override
@@ -41,76 +41,78 @@ class GorevlerState extends State<Gorevler> {
             Column(
               children: <Widget>[
                 Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(45.0),
-              ),
-              margin: EdgeInsets.all(20),
-              color: Colors.blue.shade100,
-              elevation: 10,
-              child: CheckboxListTile(
-                value: checkBoxState2,
-                onChanged: (secildi) {
-                  setState(() {
-                    checkBoxState2 = secildi;
-                  });
-                },
-                activeColor: Colors.red,
-                title: Text("Lets go to cinema right now!"),
-                secondary: CircleAvatar(
-                  backgroundImage: AssetImage("assets/images/kitap.jpg"),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(45.0),
+                  ),
+                  margin: EdgeInsets.all(20),
+                  color: Colors.blue.shade100,
+                  elevation: 10,
+                  child: CheckboxListTile(
+                    value: checkBoxState2,
+                    onChanged: (secildi) {
+                      setState(() {
+                        checkBoxState2 = secildi;
+                      });
+                    },
+                    activeColor: Colors.red,
+                    title: Text("Lets go to cinema right now!"),
+                    secondary: CircleAvatar(
+                      backgroundImage: AssetImage("assets/images/kitap.jpg"),
+                    ),
+                  ),
                 ),
-              ),
-            ),
               ],
             ),
             Column(
               children: <Widget>[
                 Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(45.0),
-              ),
-              margin: EdgeInsets.all(20),
-              color: Colors.blue.shade100,
-              elevation: 10,
-              child: CheckboxListTile(
-                value: checkBoxState7,
-                onChanged: (secildi) {
-                  setState(() {
-                    checkBoxState7 = secildi;
-                  });
-                },
-                activeColor: Colors.red,
-                title: Text("You discover new music today."),
-                secondary: CircleAvatar(
-                  backgroundImage: AssetImage("assets/images/music.jpg"),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(45.0),
+                  ),
+                  margin: EdgeInsets.all(20),
+                  color: Colors.blue.shade100,
+                  elevation: 10,
+                  child: CheckboxListTile(
+                    value: checkBoxState7,
+                    onChanged: (secildi) {
+                      setState(() {
+                        checkBoxState7 = secildi;
+                      });
+                    },
+                    activeColor: Colors.red,
+                    title: Text("You discover new music today."),
+                    secondary: CircleAvatar(
+                      backgroundImage: AssetImage("assets/images/music.jpg"),
+                    ),
+                  ),
                 ),
-              ),
-            ),
               ],
             ),
-              Column(
+            Column(
               children: <Widget>[
                 Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(45.0),
-              ),
-              margin: EdgeInsets.all(20),
-              color: Colors.blue.shade100,
-              elevation: 10,
-              child: CheckboxListTile(
-                value: checkBoxState6,
-                onChanged: (secildi) {
-                  setState(() {
-                    checkBoxState6 = secildi;
-                  });
-                },
-                activeColor: Colors.red,
-                title: Text("'Who don't know art for?'but you do any drawing today..."),
-                secondary: CircleAvatar(
-                  backgroundImage: AssetImage("assets/images/wallpaper.jpg"),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(45.0),
+                  ),
+                  margin: EdgeInsets.all(20),
+                  color: Colors.blue.shade100,
+                  elevation: 10,
+                  child: CheckboxListTile(
+                    value: checkBoxState6,
+                    onChanged: (secildi) {
+                      setState(() {
+                        checkBoxState6 = secildi;
+                      });
+                    },
+                    activeColor: Colors.red,
+                    title: Text(
+                        "'Who don't know art for?'but you do any drawing today..."),
+                    secondary: CircleAvatar(
+                      backgroundImage:
+                          AssetImage("assets/images/wallpaper.jpg"),
+                    ),
+                  ),
                 ),
-              ),
-            ),
               ],
             ),
             Card(
@@ -143,7 +145,6 @@ class GorevlerState extends State<Gorevler> {
                         _incrementCounter();
                       })),
             ),
-            
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(45.0),
@@ -239,10 +240,12 @@ class GorevlerState extends State<Gorevler> {
                   });
                 },
                 activeColor: Colors.red,
-                title: Text("My sleep is in order (I sleep more than 5 hours)."),
+                title:
+                    Text("My sleep is in order (I sleep more than 5 hours)."),
                 secondary: Icon(Icons.add),
               ),
             ),
+            
           ],
         ));
   }
